@@ -1,0 +1,6 @@
+h1::after {
+  content: "\1F4A9" !important;
+  display: inline-block !important;
+  margin-left: 2rem;
+  color: #eee !important;
+}
