@@ -8,4 +8,10 @@ pottyBreak.config(function($stateProvider) {
     controller: 'CharactersCtrl'
   });
 
+  $stateProvider.state('lobby', {
+    url: "/lobby",
+    templateUrl: "partials/lobby.html",
+    controller: 'CharactersCtrl'
+  });
+
 });

@@ -1,3 +1,7 @@
+html, button, input, select {
+  text-transform: uppercase;
+}
+
 h1::after {
   content: "\1F4A9" !important;
   display: inline-block !important;
