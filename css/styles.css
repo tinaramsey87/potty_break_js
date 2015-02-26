@@ -1,9 +1,21 @@
+*::before, *::after, * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 html, button, input, select {
   text-transform: uppercase;
 }
 
 h1,
-h3 {
+h3,
+button {
   font-family: 'Changa One', cursive;
   font-style: italic;
 }
@@ -17,4 +29,22 @@ h1::after {
 
 h2 {
   font-family: 'Changa One', cursive;
+}
+
+.alert h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.ng-invalid button {
+  color: rgba(255,255,255,.25);
+}
+
+.btn-success {
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+
+.glyphicon {
+  margin-right: 1rem;
 }

@@ -1,4 +1,3 @@
-<div class="col-md-6 col-md-offset-3">
   <h3>Who are you?!</h3>
   <form name="characterForm" ng-submit="createCharacter(characterForm.$valid)" novalidate role="form">
     <div class="form-group" ng-class="{ 'has-error' : characterForm.name.$invalid && !characterForm.name.$pristine }">
@@ -16,4 +15,3 @@
     </div> -->
     <button type="submit" class="btn" ng-class="{ 'btn\-warning' : characterForm.$invalid, 'btn\-success' : characterForm.$valid}" ng-disabled="characterForm.$invalid">Go potty!</button>
   </form>
-</div>
