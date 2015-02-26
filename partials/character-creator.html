@@ -1,19 +1,19 @@
 <div>
   <h3>Who are you?!</h3>
-  <form ng-submit="createCharacter()" role="form">
-    <div class="form-group">
-      <input type="text" class="form-control" ng-model="name" placeholder="What is your name?!" required>
+  <form name="characterForm" ng-submit="createCharacter(characterForm.$valid)" novalidate role="form">
+    <div class="form-group" ng-class="{ 'has-error' : characterForm.name.$invalid && !characterForm.name.$pristine }">
+      <input type="text" class="form-control" ng-model="name" ng-pattern="/[a-zA-Z\-\']/g" placeholder="What is your name?!" required> <!-- TODO Fix RegEx Pattern -->
     </div>
-    <div class="form-group">
-      <input type="text" class="form-control" ng-model="age" placeholder="How old are you?!" required>
+    <div class="form-group" ng-class="{ 'has-error' : characterForm.age.$invalid && !characterForm.age.$pristine }">
+      <input type="number" class="form-control" ng-model="age" placeholder="How old are you?!" required>
     </div>
-    <div class="form-group">
+    <div class="form-group" ng-class="{ 'has-error' : characterForm.gender.$invalid && !characterForm.gender.$pristine }">
       <select ng-model="gender" class="form-control" required>
         <option value="">What is your gender?!</option>
         <option value="female">Female</option>
         <option value="male">Male</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-warning" ng-class="{ btn-success: {{ character.name }} && {{ character.age }} }">Go potty!</button>
+    <button type="submit" class="btn" ng-class="{ 'btn\-warning' : characterForm.$invalid, 'btn\-success' : characterForm.$valid}" ng-disabled="characterForm.$invalid">Go potty!</button>
   </form>
 </div>
