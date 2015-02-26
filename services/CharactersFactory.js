@@ -1,5 +1,8 @@
 pottyBreak.factory('CharactersFactory', function CharactersFactory() {
   var factory = {};
-  factory.character = { hp: 10 };
+  factory.character = { pp: 0 };
+  factory.increasePPMeter = function() {
+    factory.character.pp++;
+  };
   return factory;
 });

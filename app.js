@@ -5,13 +5,18 @@ pottyBreak.config(function($stateProvider) {
   $stateProvider.state('character-creator', {
     url: "",
     templateUrl: "partials/character-creator.html",
-    controller: 'CharactersCtrl'
+    controller: "CharactersCtrl"
   });
 
   $stateProvider.state('lobby', {
-    url: "/lobby",
+    url: "/?!",
     templateUrl: "partials/lobby.html",
-    controller: 'CharactersCtrl'
+    controller: "CharactersCtrl"
   });
 
+  $stateProvider.state('hallway-01', {
+    url: "/?!",
+    templateUrl: "partials/hallway-01.html",
+    controller: "CharactersCtrl"
+  });
 });

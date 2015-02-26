@@ -1,0 +1,18 @@
+<div class="col-md-6 col-md-offset-1">
+  <h3>Hallway!</h3>
+  <form>
+    <button type="submit" class="btn btn-warning" ng-click="nextRoom('hallway-02')"><span class="glyphicon glyphicon-arrow-left"></span>Go to the left!</button>
+    <button type="submit" class="btn btn-warning" ng-click="nextRoom('lobby')"><span class="glyphicon glyphicon-arrow-down"></span>Go back!</button>
+    <button type="submit" class="btn btn-warning" ng-click="nextRoom('patio')"><span class="glyphicon glyphicon-arrow-right"></span>Go to the right!</button>
+  </form>
+</div>
+<div class="col-md-4">
+  <div class="alert alert-warning" role="alert"><h4><span class="glyphicon glyphicon-warning-sign"></span> ¡Attento!</h4><p>Your PP level is currently at {{ character.pp }}! Every step you take increases your PP level! Once you reach 10 PP&hellip; well&hellip; let's just say you don't want to reach 10!</p></div>
+  <h3>PP Meter!</h3>
+  <p>{{ character.name }}</p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ character.pp }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ character.pp }}0%">
+      <span class="sr-only">{{ character.pp }}0% Full</span>
+    </div>
+  </div>
+</div>

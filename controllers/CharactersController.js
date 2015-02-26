@@ -3,11 +3,14 @@ pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, 
   $scope.CharactersFactory = CharactersFactory;
   $scope.createCharacter = function(isValid) {
     if (isValid) {
-    $scope.character.name = $scope.name;
-    $scope.character.age = $scope.age;
-    $scope.character.gender = $scope.gender;
-    $state.go('lobby');
+      $scope.character.name = $scope.name;
+      $scope.character.age = $scope.age;
+      $scope.character.gender = $scope.gender;
+      $state.go('lobby');
     }
-  }
-
+  };
+  $scope.nextRoom = function(room) {
+    $scope.CharactersFactory.increasePPMeter();
+    $state.go(room);
+  };
 });

@@ -1,3 +1,20 @@
-<div>
-  <p>{{ character.name }}, {{ character.hp }}</p>
+<div class="col-md-6 col-md-offset-1">
+  <h3>Random Office Building Lobby!</h3>
+  <p>There is a hallway in front of you and another hallway to your right! Which hallway would you like to head down?!</p>
+  <form>
+    <button type="submit" class="btn btn-warning" ng-click="nextRoom('hallway-01')"><span class="glyphicon glyphicon-arrow-up"></span>Go forward!</button>
+    <button type="submit" class="btn btn-warning" ng-click="nextRoom('hallway-07')"><span class="glyphicon glyphicon-arrow-right"></span>Go to the right!</button>
+  </form>
+</div>
+<div class="col-md-4">
+  <h3>What's the deal?!</h3>
+  <p>{{ character.name }}! The Fear<sup>&reg;</sup> has struck and you are in desperate need of a loo!</p>
+  <p>You've entered the nearest office building but it is post-apocalyptically empty! There are many doors and hallways to traverse! Alas there is no map or directory, and for some reason none of the doors have signage!</p>
+  <div class="alert alert-warning" role="alert"><h4><span class="glyphicon glyphicon-warning-sign"></span> ¡Attento!</h4><p>Your PP level is currently at {{ character.pp }}! Every step you take increases your PP level! Once you reach 10 PP&hellip; well&hellip; let's just say you don't want to reach 10!</p></div>
+  <h3>PP Meter!</h3>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ character.pp }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ character.pp }}0%">
+      <span class="sr-only">{{ character.pp }}0% Full</span>
+    </div>
+  </div>
 </div>
