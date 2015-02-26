@@ -2,9 +2,19 @@ html, button, input, select {
   text-transform: uppercase;
 }
 
+h1,
+h3 {
+  font-family: 'Changa One', cursive;
+  font-style: italic;
+}
+
 h1::after {
   content: "\1F4A9" !important;
   display: inline-block !important;
   margin-left: 2rem;
   color: #eee !important;
+}
+
+h2 {
+  font-family: 'Changa One', cursive;
 }
