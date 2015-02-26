@@ -7,4 +7,5 @@ pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, 
     $scope.character.gender = $scope.gender;
     $state.go('lobby');
   }
+  if ($scope.name && $scope.age) { filled };
 });
