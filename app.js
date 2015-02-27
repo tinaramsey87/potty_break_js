@@ -9,14 +9,14 @@ pottyBreak.config(function($stateProvider) {
   });
 
   $stateProvider.state('lobby', {
-    url: "/?!",
-    templateUrl: "partials/lobby.html",
-    controller: "CharactersCtrl"
+    url: "/rooms",
+    templateUrl: "partials/rooms.html",
+    controller: "RoomsCtrl"
   });
 
   $stateProvider.state('hallway-01', {
-    url: "/?!",
-    templateUrl: "partials/hallway-01.html",
-    controller: "CharactersCtrl"
+    url: "/rooms",
+    templateUrl: "partials/rooms.html",
+    controller: "RoomsCtrl"
   });
 });

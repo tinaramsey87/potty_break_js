@@ -9,8 +9,4 @@ pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, 
       $state.go('lobby');
     }
   };
-  $scope.nextRoom = function(room) {
-    $scope.CharactersFactory.increasePPMeter();
-    $state.go(room);
-  };
 });
