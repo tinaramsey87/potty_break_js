@@ -1,7 +1,6 @@
 var pottyBreak = angular.module('pottyBreak', ['ui.router']);
 
 pottyBreak.config(function($stateProvider) {
-
   $stateProvider.state('character-creator', {
     url: "",
     templateUrl: "partials/character-creator.html",
@@ -15,6 +14,12 @@ pottyBreak.config(function($stateProvider) {
   });
 
   $stateProvider.state('hallway-01', {
+    url: "/rooms",
+    templateUrl: "partials/rooms.html",
+    controller: "RoomsCtrl"
+  });
+
+  $stateProvider.state('hallway-09', {
     url: "/rooms",
     templateUrl: "partials/rooms.html",
     controller: "RoomsCtrl"

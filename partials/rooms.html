@@ -1,6 +1,8 @@
-<h3>{{ RoomsFactory.rooms[RoomsFactory.getCurrentRoom()].name }}!</h3>
-<p>{{ RoomsFactory.rooms[RoomsFactory.getCurrentRoom()].text }}</p>
+<h3>{{ RoomsFactory.currentRoom().name }}!</h3>
+<p>{{ RoomsFactory.currentRoom().text }}</p>
 <form>
-  <button type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(rooms[1].state)"><span class="glyphicon glyphicon-arrow-up"></span>Go forward!</button>
-  <button type="submit" class="btn btn-warning" ng-click="nextRoom('hallway-07')"><span class="glyphicon glyphicon-arrow-right"></span>Go to the right!</button>
+  <button ng-if="RoomsFactory.currentRoom().forward" type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(RoomsFactory.currentRoom().forward)"><span class="glyphicon glyphicon-arrow-up"></span>Go forward!</button>
+  <button ng-if="RoomsFactory.currentRoom().right" type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(RoomsFactory.currentRoom().right)"><span class="glyphicon glyphicon-arrow-right"></span>Go to the right!</button>
+  <button ng-if="RoomsFactory.currentRoom().backward" type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(RoomsFactory.currentRoom().backward)"><span class="glyphicon glyphicon-arrow-down"></span>Go backward!</button>
+  <button ng-if="RoomsFactory.currentRoom().left" type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(RoomsFactory.currentRoom().left)"><span class="glyphicon glyphicon-arrow-left"></span>Go to the left!</button>
 </form>
