@@ -1,13 +1,5 @@
 pottyBreak.factory('RoomsFactory', function RoomsFactory($state, CharactersFactory) {
   var factory = {};
-
-  factory.nextRoom = function(state) {
-    CharactersFactory.increasePPMeter();
-    console.log(state)
-    // var index = indexOf(state);
-    $state.go(state);
-  };
-
   factory.rooms = [
     { name: "Random Office Building Lobby",
       text: "There is a hallway in front of you and another hallway to your right! Which hallway would you like to head down?!",
@@ -90,5 +82,25 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($state, CharactersFacto
       exits: ["behind", "left"]
     }, // 15
   ];
+
+  factory.getCurrentRoom = function() {
+    var stateName = $state.current.name;
+    console.log("stateName " + stateName);
+
+    for (var i = 0; i < factory.rooms.length; i++) {
+      if (factory.rooms[i]['state'] == stateName) {
+        console.log("index: " + i);
+        return i;
+      }
+    }
+    return null;
+  };
+
+  factory.nextRoom = function(state) {
+    CharactersFactory.increasePPMeter();
+    $state.go(state);
+  };
+
+ // factory.getCurrentRoom();
   return factory;
 });
