@@ -16,7 +16,7 @@ pottyBreak.config(function($stateProvider) {
 
   $stateProvider.state('hallway-01', {
     url: "/rooms",
-    templateUrl: "partials/rooms.html",
+    templateUrl: "partials/hallway-01.html",
     controller: "RoomsCtrl"
   });
 });

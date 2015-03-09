@@ -1,6 +1,6 @@
-<h3>{{ rooms[index].name }}!</h3>
-<p>{{ rooms[index].text }}</p>
+<h3>{{ rooms[0].name }}!</h3>
+<p>{{ rooms[0].text }}</p>
 <form>
-  <button type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom('{{ rooms[1].state }}')"><span class="glyphicon glyphicon-arrow-up"></span>Go forward!</button>
+  <button type="submit" class="btn btn-warning" ng-click="RoomsFactory.nextRoom(rooms[1].state)"><span class="glyphicon glyphicon-arrow-up"></span>Go forward!</button>
   <button type="submit" class="btn btn-warning" ng-click="nextRoom('hallway-07')"><span class="glyphicon glyphicon-arrow-right"></span>Go to the right!</button>
 </form>

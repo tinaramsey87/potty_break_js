@@ -2,10 +2,9 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($state, CharactersFacto
   var factory = {};
 
   factory.nextRoom = function(state) {
-    console.log(state);
     CharactersFactory.increasePPMeter();
-    var index = indexOf('state');
-    console.log(index);
+    console.log(state)
+    // var index = indexOf(state);
     $state.go(state);
   };
 
@@ -20,20 +19,76 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($state, CharactersFacto
       state: "hallway-01",
       exits: ["right", "behind", "left"]
     }, // 1
-    { name: "Hallway", state: "hallway-02", exits: ["right", "behind"] },
-    { name: "Hallway", state: "hallway-03", exits: ["right", "behind", "left"] },
-    { name: "Hallway", state: "hallway-04", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-05", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-06", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-07", exits: ["front", "right", "behind"] },
-    { name: "Hallway", state: "hallway-08", exits: ["right", "behind"] },
-    { name: "Hallway", state: "hallway-09", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-10", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-11", exits: ["behind", "left"] },
-    { name: "Hallway", state: "hallway-12", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-13", exits: ["front", "behind", "left"] },
-    { name: "Hallway", state: "hallway-14", exits: ["behind", "left"] },
-    { name: "Hallway", state: "hallway-14", exits: ["behind", "left"] },
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-02",
+      exits: ["right", "behind"]
+    }, // 2
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-03",
+      exits: ["right", "behind", "left"]
+    }, // 3
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-04",
+      exits: ["front", "behind", "left"]
+    }, // 4
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-05",
+      exits: ["front", "behind", "left"]
+    }, //5
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-06",
+      exits: ["front", "behind", "left"]
+    }, // 6
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-07",
+      exits: ["front", "right", "behind"]
+    }, // 7
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-08",
+      exits: ["right", "behind"]
+    }, // 8
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-09",
+      exits: ["front", "behind", "left"]
+    }, // 9
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-10",
+      exits: ["front", "behind", "left"]
+    }, // 10
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-11",
+      exits: ["behind", "left"]
+    }, // 11
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-12",
+      exits: ["front", "behind", "left"]
+    }, // 12
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-13",
+      exits: ["front", "behind", "left"]
+    }, // 13
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-14",
+      exits: ["behind", "left"]
+    }, // 14
+    { name: "Hallway",
+      text: "Text goes here!",
+      state: "hallway-14",
+      exits: ["behind", "left"]
+    }, // 15
   ];
   return factory;
 });
