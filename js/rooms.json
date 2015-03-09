@@ -20,57 +20,47 @@
       "text": "This is Hallway-02",
       "state": "hallway-02",
       "right": "hallway-03",
-      "behind": "hallway-01"
+      "backward": "hallway-01"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-03",
       "state": "hallway-03",
-      "exits": [
-          "right",
-          "behind",
-          "left"
-      ]
+      "right": "hallway-07",
+      "backward": "hallway-02",
+      "left": "hallway-04"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-04",
       "state": "hallway-04",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-05",
+      "backward": "hallway-03",
+      "left": "office-01"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-05",
       "state": "hallway-05",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-06",
+      "backward": "hallway-04",
+      "left": "office-02"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-06",
       "state": "hallway-06",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "elevators",
+      "backward": "hallway-05",
+      "left": "lounge"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-07",
       "state": "hallway-07",
-      "exits": [
-          "front",
-          "right",
-          "behind"
-      ]
+      "forward": "hallway-08",
+      "right": "cube-farm",
+      "backward": "hallway-03"
     },
     {
       "name": "Hallway",
