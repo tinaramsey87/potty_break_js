@@ -66,77 +66,61 @@
       "name": "Hallway",
       "text": "This is Hallway-08",
       "state": "hallway-08",
-      "exits": [
-          "right",
-          "behind"
-      ]
+      "right": "conference-room",
+      "backward": "hallway-07"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-09",
       "state": "hallway-09",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-10",
+      "backward": "lobby",
+      "left": "storage-01"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-10",
       "state": "hallway-10",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-11",
+      "backward": "hallway-09",
+      "left": "storage-02"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-11",
       "state": "hallway-11",
-      "exits": [
-          "behind",
-          "left"
-      ]
+      "backward": "hallway-10",
+      "left": "hallway-12"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-12",
       "state": "hallway-12",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-13",
+      "backward": "hallway-11",
+      "left": "mail-room"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-13",
       "state": "hallway-13",
-      "exits": [
-          "front",
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-14",
+      "backward": "hallway-12",
+      "left": "office-03"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-14",
       "state": "hallway-14",
-      "exits": [
-          "behind",
-          "left"
-      ]
+      "forward": "hallway-15",
+      "backward": "hallway-13"
     },
     {
       "name": "Hallway",
       "text": "This is Hallway-15",
       "state": "hallway-15",
-      "exits": [
-          "behind",
-          "left"
-      ]
+      "backward": "hallway-14",
+      "left": "janitor-closet"
     }
   ]
 }

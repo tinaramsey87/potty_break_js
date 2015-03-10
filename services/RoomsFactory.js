@@ -5,7 +5,7 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($rootScope, $state, $ht
   factory.currentRoom = function() {
     var stateName = $state.current.name;
 
-    for (var i = 0; i < factory.rooms.length; i++) {
+    for (i = 0; i < factory.rooms.length; i++) {
       if (factory.rooms[i]['state'] == stateName) {
         return factory.rooms[i];
       }
