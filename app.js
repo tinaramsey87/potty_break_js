@@ -1,8 +1,14 @@
 var pottyBreak = angular.module('pottyBreak', ['ui.router']);
 
+pottyBreak.run(function($http, $rootScope) {
+  $http.get('/js/appData.json').success(function(data) {
+    $rootScope.appData = data;
+  });
+});
+
 pottyBreak.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('character-creator', {
-    url: "",
+    url: "/",
     templateUrl: "partials/character-creator.html",
     controller: "CharactersCtrl"
   });
@@ -13,45 +19,5 @@ pottyBreak.config(function($stateProvider, $urlRouterProvider) {
     controller: "RoomsCtrl"
   });
 
-  $stateProvider.state('hallway-01', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-02', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-03', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-04', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-05', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-06', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
-
-  $stateProvider.state('hallway-07', {
-    url: "/rooms",
-    templateUrl: "partials/rooms.html",
-    controller: "RoomsCtrl"
-  });
+  $urlRouterProvider.otherwise("/");
 });
