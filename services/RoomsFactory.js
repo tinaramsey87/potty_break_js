@@ -15,7 +15,11 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($rootScope, $state, $ht
 
   factory.nextRoom = function(state) {
     CharactersFactory.increasePPMeter();
-    $state.go(state);
+    if (CharactersFactory.character.pp > 9) {
+      $state.go('you-lose');
+    } else {
+      $state.go(state);
+    }
   };
 
   return factory;

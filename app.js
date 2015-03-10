@@ -24,6 +24,11 @@ pottyBreak.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "partials/character-creator.html",
     controller: "CharactersCtrl"
   });
+  $stateProvider.state('you-lose', {
+    url:"/you-are-a-loser",
+    templateUrl: "partials/lose.html",
+    controller: "CharactersCtrl"
+  });
   $stateProviderRef = $stateProvider;
   $urlRouterProvider.otherwise("/");
 });
