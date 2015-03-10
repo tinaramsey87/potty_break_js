@@ -1,6 +1,15 @@
 pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, CharactersFactory) {
   $scope.character = CharactersFactory.character;
   $scope.CharactersFactory = CharactersFactory;
+
+  $scope.wipeCharacter = function() {
+    $scope.character.name = null;
+    $scope.character.age = null;
+    $scope.character.gender = null;
+    $scope.CharactersFactory.character.pp = 0;
+    $state.go('character-creator');
+  }
+
   $scope.createCharacter = function(isValid) {
     if (isValid) {
       $scope.character.name = $scope.name;
