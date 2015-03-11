@@ -1,6 +1,7 @@
-pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, CharactersFactory) {
+pottyBreak.controller('CharactersCtrl', function CharactersCtrl($scope, $state, CharactersFactory, AppDataFactory) {
   $scope.character = CharactersFactory.character;
   $scope.CharactersFactory = CharactersFactory;
+  $scope.AppDataFactory = AppDataFactory;
 
   $scope.wipeCharacter = function() {
     $scope.character.name = null;

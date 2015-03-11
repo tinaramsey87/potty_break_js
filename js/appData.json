@@ -1,4 +1,10 @@
 {
+  "setup": [
+    {
+      "title": "Potty Break!",
+      "subtitle": "Don't soil yourself! Everything is imperative!"
+    }
+  ],
   "rooms": [
     {
       "name": "Random Office Building Lobby",

@@ -12,6 +12,7 @@
     <script src="controllers/CharactersController.js"></script>
     <script src="controllers/RoomsController.js"></script>
 
+    <script src="services/AppDataFactory.js"></script>
     <script src="services/CharactersFactory.js"></script>
     <script src="services/RoomsFactory.js"></script>
 
@@ -22,7 +23,7 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1 class="container">Potty Break!</h1>
+      <h1 class="container">{{ AppDataFactory.setup[0]['title'] }}</h1>
       <h2 class="container">Don't soil yourself! Everything is imperative!</h2>
     </div>
 

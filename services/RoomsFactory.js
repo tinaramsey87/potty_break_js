@@ -22,5 +22,6 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($rootScope, $state, $ht
     }
   };
 
+  console.log(factory);
   return factory;
 });
