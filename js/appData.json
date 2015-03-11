@@ -2,7 +2,9 @@
   "setup": [
     {
       "title": "Potty Break!",
-      "subtitle": "Don't soil yourself! Everything is imperative!"
+      "subtitle": "Don't soil yourself! Everything is imperative!",
+      "howToPlayHeader": "What's the deal?!",
+      "howToPlayText": "<p>{{ character.name }}! The Fear<sup>&reg;</sup> has struck and you are in desperate need of a loo!</p><p>You've entered the nearest office building but it is post-apocalyptically empty! There are many doors and hallways to traverse! Alas there is no map or directory, and for some reason none of the doors have signage!</p>"
     }
   ],
   "rooms": [

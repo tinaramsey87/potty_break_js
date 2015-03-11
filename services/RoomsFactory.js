@@ -1,6 +1,6 @@
-pottyBreak.factory('RoomsFactory', function RoomsFactory($rootScope, $state, $http, CharactersFactory) {
+pottyBreak.factory('RoomsFactory', function RoomsFactory($state, $http, CharactersFactory, AppDataFactory) {
   var factory = {};
-  factory.rooms = $rootScope.appData.rooms;
+  factory.rooms = AppDataFactory.rooms;
 
   factory.currentRoom = function() {
     var stateName = $state.current.name;
@@ -22,6 +22,5 @@ pottyBreak.factory('RoomsFactory', function RoomsFactory($rootScope, $state, $ht
     }
   };
 
-  console.log(factory);
   return factory;
 });

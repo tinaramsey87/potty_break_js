@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
 
-    <script src="lib/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.js"></script>
     <script src="lib/angular-ui-router.js"></script>
     <script src="lib/jquery-1.11.2.js"></script>
 
     <script src="app.js"></script>
 
+    <script src="controllers/AppDataController.js"></script>
     <script src="controllers/CharactersController.js"></script>
     <script src="controllers/RoomsController.js"></script>
 
@@ -22,10 +24,10 @@
     <title>Potty Break 💩</title>
   </head>
   <body>
-    <div class="jumbotron">
+    <header class="jumbotron" ng-controller="AppDataCtrl">
       <h1 class="container">{{ AppDataFactory.setup[0]['title'] }}</h1>
-      <h2 class="container">Don't soil yourself! Everything is imperative!</h2>
-    </div>
+      <h2 class="container">{{ AppDataFactory.setup[0]['subtitle'] }}</h2>
+    </header>
 
     <div class="container">
 
@@ -33,9 +35,8 @@
 
       <div class="col-md-4" ng-controller="CharactersCtrl" ng-show="character.name != null">
         <div ng-show="character.pp == 0">
-          <h3>What's the deal?!</h3>
-          <p>{{ character.name }}! The Fear<sup>&reg;</sup> has struck and you are in desperate need of a loo!</p>
-          <p>You've entered the nearest office building but it is post-apocalyptically empty! There are many doors and hallways to traverse! Alas there is no map or directory, and for some reason none of the doors have signage!</p>
+          <h3>{{ AppDataFactory.setup[0]['howToPlayHeader'] }}</h3>
+          <div ng-bind-html="AppDataFactory.setup[0]['howToPlayText']"></div>
         </div>
         <div class="alert alert-warning" role="alert"><h4><span class="glyphicon glyphicon-warning-sign"></span> ¡Attento!</h4><p>Your PP level is currently at {{ character.pp }}! Every step you take increases your PP level! Once you reach 10 PP&hellip; well&hellip; let's just say you don't want to reach 10!</p></div>
         <h3>PP Meter!</h3>

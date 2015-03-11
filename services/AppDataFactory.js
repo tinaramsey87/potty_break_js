@@ -6,8 +6,8 @@ pottyBreak.factory('AppDataFactory', function AppDataFactory($http) {
   $http.get('/js/appData.json').success(function(data) {
     factory.setup = data.setup;
     factory.rooms = data.rooms;
+    routeBuilder();
   });
 
-  console.log(factory);
   return factory;
 });

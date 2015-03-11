@@ -1,14 +1,9 @@
-var pottyBreak = angular.module('pottyBreak', ['ui.router']);
+var pottyBreak = angular.module('pottyBreak', ['ui.router','ngSanitize']);
 
-pottyBreak.run(function($http, $rootScope) {
-  $http.get('/js/appData.json').success(function(data) {
-    $rootScope.appData = data;
-    routeBuilder();
-  });
-
+pottyBreak.run(function(AppDataFactory) {
   routeBuilder = function() {
-    for (i = 0; i < $rootScope.appData.rooms.length; i++) {
-      currentState = $rootScope.appData.rooms[i]['state'];
+    for (i = 0; i < AppDataFactory.rooms.length; i++) {
+      currentState = AppDataFactory.rooms[i]['state'];
       $stateProviderRef.state(currentState, {
         url: "/rooms",
         templateUrl: "partials/rooms.html",
